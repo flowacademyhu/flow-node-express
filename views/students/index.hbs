@@ -1,0 +1,19 @@
+<h1>Tanulók</h1>
+<a href="/students/new">Új tanuló létrehozása</a>
+<table>
+  {{#each students}}
+    <tr>
+      <td>
+        <a href="/students/{{id}}">{{name}}</a>
+      </td>
+      <td>
+        <a href="/students/{{id}}/edit">szerkesztés</a>
+      </td>
+      <td>
+        <form action="/students/{{id}}?_method=DELETE" method="POST"">
+          <button type="submit">törlés</button>
+        </form>
+      </td>
+    </tr>
+  {{/each}}
+</table>

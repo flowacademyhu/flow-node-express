@@ -1,0 +1,12 @@
+<label for="name">Név</label>
+<input type="text" value="{{student.name}}" name="name" id="name">
+<label for="name">Nem</label>
+{{student.sex}}
+<select name="sex" id="sex">
+  <option value="female" {{isSelected student.sex "female"}}>Nő</option>
+  <option value="male" {{isSelected student.sex "male"}}>Férfi</option>
+</select>
+<label for="name">Kor</label>
+<input type="text" value="{{student.age}}" name="age" id="age">
+<label for="name">Pont</label>
+<input type="input" value="{{student.score}}" name="score" id="score">
